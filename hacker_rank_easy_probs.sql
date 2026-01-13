@@ -37,5 +37,20 @@ CASE
 FROM
 TRIANGLES; 
 
+/*
+Hacker Rank Question: African Cities
+
+Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
+Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+*/
+
+-- Concepts: Inner Joins
+
+SELECT cy.name
+FROM city cy
+INNER JOIN country co
+ON cy.countrycode = co.code
+WHERE co.continent = 'Africa';
+
 
 
